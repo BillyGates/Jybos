@@ -1,0 +1,8 @@
+timeout 10
+foreground ffffff
+background 000017
+splashimage=/boot/grub/splash.xpm.gz 
+
+title Köttur 0.0.1
+    kernel /system/kernel
+    boot
