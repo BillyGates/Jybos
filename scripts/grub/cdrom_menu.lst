@@ -3,6 +3,6 @@ foreground ffffff
 background 000017
 splashimage=/boot/grub/splash.xpm.gz
 
-title Köttur 0.0.1
+title Jybos 0.0.1
     kernel /system/kernel
     boot
