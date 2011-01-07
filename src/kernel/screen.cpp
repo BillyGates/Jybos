@@ -1,4 +1,5 @@
 #include <screen.h>
+#include <string.h>
 
 using namespace driver;
 
@@ -49,6 +50,33 @@ void screen::puts(const char* s)
     }
 }
 
+void screen::puts(int i)
+{
+    char buf[65];
+    
+    if(!isHex)
+    {
+        itoa(i, (char*) &buf);
+        puts(buf); 
+    }
+    else
+    {
+        
+        const char* digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        char* p;
+
+         p = buf + 64;
+        *p = '\0';
+        do
+        {
+            *--p = digits[i % 16];
+            i /= 16;
+        } while(i);
+        puts("0x");
+        puts(p);
+    }
+}
+
 void screen::clear()
 {
     int i;
@@ -65,6 +93,10 @@ void screen::SetColors(std_screen::scrn_color farbe)
     attrib = (farbe.GetBackground() << 4) | (farbe.GetForeground() & 0x0F);    
 }
 
+void screen::SetHex(bool k)
+{
+   isHex = k;
+}
 
 using namespace std_screen;
 

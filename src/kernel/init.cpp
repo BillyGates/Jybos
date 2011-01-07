@@ -3,8 +3,9 @@
 extern "C" void init()
 {
     cout.InitScreen();
-      
-    cout.puts("Hello World");
+    
+    cout.SetHex(true);  
+    cout.puts(123123);
     
     while(1);
 }

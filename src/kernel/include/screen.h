@@ -50,15 +50,18 @@ namespace driver
         char attrib;
         int x;
         int y;
+        bool isHex;
 
     public:
     
         void InitScreen();
         void putch(char s);
         void puts(const char* s);
+        void puts(int i);
         void clear();
         void SetColors(std_screen::scrn_color farbe);	
-    };
+        void SetHex(bool k);
+     };
 
     
 }
