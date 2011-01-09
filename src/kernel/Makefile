@@ -9,7 +9,7 @@ ASM = nasm
 ASFLAGS = -m32
 ASMFLAGS = -felf
 CFLAGS = -m32 -Wall -g -fno-stack-protector -I include
-CPPFLAGS = -m32 -I include -fno-use-cxa-atexit -nostdlib -fno-builtin -fno-rtti -fno-exceptions -fno-leading-underscore -Wall -Wextra -pedantic-errors
+CPPFLAGS = -m32 -I include -std=c++0x -fno-use-cxa-atexit -nostdlib -fno-builtin -fno-rtti -fno-exceptions -fno-leading-underscore -Wall -Wextra -pedantic-errors
 LDFLAGS = -melf_i386 -T kernel.ld
 
 all: kernel

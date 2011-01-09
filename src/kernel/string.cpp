@@ -1,3 +1,5 @@
+/*Diese Datei enthält Funktionen die zum Umgang mit strings nötig sind.*/
+
 #include <string.h>
 
 void itoa(int n, char *s)

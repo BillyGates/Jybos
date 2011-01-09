@@ -1,3 +1,9 @@
+/*Diese Datei enthält Klassen und Funktionen die zur 
+  Bildschirmausgabe im protected mode nötig sind.
+  Hierzu wird in den Videospeicher des Textmodus geschrieben (0xb8000).
+  Ausserdem ermöglicht die Klasse scrn_color es komfortabel die Farben zu ändern.
+*/
+
 #include <screen.h>
 #include <string.h>
 
